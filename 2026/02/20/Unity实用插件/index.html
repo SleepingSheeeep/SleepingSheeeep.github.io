@@ -10,17 +10,23 @@
     <meta name="copyright" content="John Doe">
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2026/index.html">
+    <meta name="description" content="数据持久化：EasySave、Advanced PlayerPrefs Window 动画：Dotween、TimeLine 异步：UniTask（Dotween也可以实现） 编辑器工具：Odin Inspector 序列化： 二进制：Odin Serializer Json序列化：Newtonsoft（支持序列化Dictionary，不支持HashSet）   摄像机：Cinemachine">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity实用插件（持续更新）">
+<meta property="og:url" content="http://example.com/2026/02/20/Unity%E5%AE%9E%E7%94%A8%E6%8F%92%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据持久化：EasySave、Advanced PlayerPrefs Window 动画：Dotween、TimeLine 异步：UniTask（Dotween也可以实现） 编辑器工具：Odin Inspector 序列化： 二进制：Odin Serializer Json序列化：Newtonsoft（支持序列化Dictionary，不支持HashSet）   摄像机：Cinemachine">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-02-20T15:58:42.000Z">
+<meta property="article:modified_time" content="2026-02-20T16:38:21.699Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Unity">
+<meta property="article:tag" content="游戏开发">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
-    <title>SleepingSheep&#39;s Blog</title>
+    <title>Unity实用插件（持续更新） · SleepingSheep&#39;s Blog</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -208,6 +214,7 @@
             document.write('<script src="/lib/jquery.min.js" />')
         }
     </script>
+        <body class="post-body">
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -237,7 +244,7 @@
             <a href="/">SleepingSheep&#39;s Blog</a>
         </div>
         <div class="post-title header-element">
-            <a href="#" class="post-name"></a>
+            <a href="#" class="post-name">Unity实用插件（持续更新）</a>
         </div>
     </div>
 </header>
@@ -254,20 +261,61 @@
 
         <!-- wrapper -->
         <div class="wrapper">
-            <div class="site-intro" style="">
+            <div class="site-intro" style="    height:50vh;
+">
     <!-- 主页  -->
+    <!-- 404页  -->
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+                Unity实用插件（持续更新）
+            <!-- 404 -->
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
+            <!-- 404 -->
         </p>
         <!-- 文章页 meta -->
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                    <div class="post-intro-tags" >
+        <a class="post-tag" href="javascript:void(0);" data-tags="游戏开发">游戏开发</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Unity">Unity</a>
+</div>
+
+                <!-- 文章字数统计 -->
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">63</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2026/02/20</span>
+                    <!-- busuanzi -->
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    <!-- 文章分享 -->
+                    <!-- <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span> -->
+                </div>
+            </div>
     </div>
 </div>
 
@@ -396,44 +444,50 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" alt="loading">
             <div class="container container-unloaded">
-                <main class="main index-page">
+                <main class="main post-page">
+    <article class="article-entry">
+        <ul>
+<li>数据持久化：EasySave、Advanced PlayerPrefs Window</li>
+<li>动画：Dotween、TimeLine</li>
+<li>异步：UniTask（Dotween也可以实现）</li>
+<li>编辑器工具：Odin Inspector</li>
+<li>序列化：<ul>
+<li>二进制：Odin Serializer</li>
+<li>Json序列化：Newtonsoft（支持序列化Dictionary，不支持HashSet）</li>
+</ul>
+</li>
+<li>摄像机：Cinemachine</li>
+<li>依赖注入框架：VContainer</li>
+</ul>
+
+    </article>
+    <!-- license -->
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+        </li>
+        <li class="previous">
+        </li>
+    </ul>
+    <!-- comment -->
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
             
-        <article class="index-post">
-            <a class="abstract-title" href="/2026/02/20/Unity%E5%AE%9E%E7%94%A8%E6%8F%92%E4%BB%B6/">
-                <span class="abstract-title-text">Unity实用插件（持续更新）</span>
-            </a>
-            <div class="abstract-content">
-                
-数据持久化：EasySave、Advanced PlayerPrefs Window
-动画：Dotween、TimeLine
-异步：UniTask（Dotween也可以实现）
-编辑器工具：Odin Inspector
-序列化：
-二进制：Odin Serializer
-Json序列化：Newtonsoft（支持序列化Dictionary，不支持HashSet）
+            
+            
+            <!-- utteranc评论 -->
 
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
 
-摄像机：Cinemachine
-依赖注入框架：VContainer
-
-
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2026/02/21">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2026/02/20</span>
-                </div>
-                <!-- tags -->
-                    <div class="abstract-tags" >
-        <a class="post-tag" href="javascript:void(0);" data-tags="游戏开发">游戏开发</a>
-        <a class="post-tag" href="javascript:void(0);" data-tags="Unity">Unity</a>
-</div>
-
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    <!-- paginator  -->
+            
+            
+            
+        </div>
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    <!-- Mathjax -->
 </main>
 
                 <!-- profile -->
@@ -463,6 +517,13 @@ Json序列化：Newtonsoft（支持序列化Dictionary，不支持HashSet）
 
         </div>
         <!-- toc -->
+            <div class="toc-wrapper toc-wrapper-loding" style=    top:50vh;
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                
+            </div>
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
     <ul class="sidebar-tabs sidebar-tabs-active-0">
@@ -543,6 +604,7 @@ Json序列化：Newtonsoft（支持序列化Dictionary，不支持HashSet）
         <!-- busuanzi -->
             <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
         <!-- async load share.js -->
+            <script src="/scripts/share.js" async></script>
         <!-- mermaid -->
     </body>
 </html>
